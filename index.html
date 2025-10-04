@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BİRBİLEN | Araç İnceleme</title>
+  <style>
+    :root {
+      --primary: #0b79d0;
+      --secondary: #f6f8fb;
+      --text: #222;
+      --card-bg: #ffffff;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body { font-family: 'Arial', sans-serif; background-color: var(--secondary); color: var(--text); line-height: 1.6; }
+
+    /* Header */
+    header {
+      background: var(--card-bg); padding: 20px 30px;
+      display: flex; justify-content: space-between; align-items: center;
+      box-shadow: 0 4px 12px var(--shadow); position: sticky; top: 0; z-index: 1000;
+    }
+    .brand { font-weight: 700; color: var(--primary); font-size: 24px; }
+    nav a { margin-left: 20px; text-decoration: none; color: var(--text); font-weight: 500; transition: 0.3s; }
+    nav a:hover { color: var(--primary); }
+
+    /* Hero */
+    .hero {
+      max-width: 1200px; margin: 40px auto; padding: 30px;
+      display: grid; grid-template-columns: 1fr 400px; gap: 30px;
+      background: linear-gradient(180deg, #fff, #eaf2fb); border-radius: 15px;
+      box-shadow: 0 8px 20px var(--shadow);
+    }
+    .hero h1 { font-size: 32px; margin-bottom: 15px; color: var(--primary); }
+    .hero p { font-size: 18px; color: #444; margin-bottom: 20px; }
+    .cta { display: inline-block; padding: 12px 20px; border-radius: 8px; background: var(--primary); color: #fff; font-weight: 600; text-decoration: none; }
+
+    /* Kartlar */
+    .card { background: var(--card-bg); border-radius: 12px; padding: 20px; box-shadow: 0 6px 20px var(--shadow); margin-bottom: 20px; }
+    .card h3 { margin-bottom: 12px; color: var(--primary); }
+
+    /* Araç Detay Bölümü */
+    .vehicle-details {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px;
+    }
+    .vehicle-details img { width: 100%; border-radius: 12px; box-shadow: 0 4px 14px var(--shadow); }
+    .vehicle-info h2 { margin-bottom: 15px; color: var(--primary); }
+    .vehicle-info h4 { margin-top: 15px; margin-bottom: 8px; color: var(--primary); }
+    .vehicle-info ul { list-style: none; padding-left: 0; }
+    .vehicle-info li { padding: 6px 0; border-bottom: 1px solid #eee; }
+
+    /* Footer */
+    footer { text-align: center; padding: 30px; margin-top: 40px; background: var(--card-bg); box-shadow: 0 -4px 12px var(--shadow); font-size: 14px; color: #555; }
+
+    /* Responsive */
+    @media(max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .vehicle-details { grid-template-columns: 1fr; }
+      nav a { display: block; margin: 10px 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="brand">BİRBİLEN</div>
+    <nav>
+      <a href="#anasayfa">Anasayfa</a>
+      <a href="#araçlar">Araçlar</a>
+      <a href="#rehber">Rehber</a>
+      <a href="#iletisim">İletişim</a>
+    </nav>
+  </header>
+
+  <!-- Hero / Tanıtım -->
+  <main class="hero" id="anasayfa">
+    <div>
+      <h1>Tüm Araçları Ayrıntılı Keşfet</h1>
+      <p>BİRBİLEN ile 1950 yılı ve sonrası otomobil modellerinin iç-dış tasarımı, performansı, artı/eksi yönleri, kullanım rahatlığı ve teknik detaylarını öğrenin.</p>
+      <a class="cta" href="#araçlar">İncelemelere Başla</a>
+    </div>
+    <aside class="card">
+      <h3>Öne Çıkan Araçlar</h3>
+      <ul>
+        <li>2025 Model Sedan X</li>
+        <li>2010 Model SUV Y</li>
+        <li>1967 Klasik Araç Z</li>
+      </ul>
+    </aside>
+  </main>
+
+  <!-- Araç Detay Bölümü -->
+  <section class="vehicle-details" id="araçlar">
+    <img src="https://via.placeholder.com/500x300" alt="Araç Görseli">
+    <div class="vehicle-info card">
+      <h2>2025 Model Sedan X</h2>
+
+      <h4>Genel Bilgiler</h4>
+      <ul>
+        <li>Marka: SedanX Motors</li>
+        <li>Segment: Sedan</li>
+        <li>Üretim Yılı: 2025</li>
+        <li>Fiyat Aralığı: 1.200.000 TL</li>
+      </ul>
+
+      <h4>Performans</h4>
+      <ul>
+        <li>Motor: 2.0L Turbo, 250 HP</li>
+        <li>Şanzıman: 8 ileri otomatik</li>
+        <li>0-100 km/s: 7.5 sn</li>
+        <li>Maksimum Hız: 240 km/s</li>
+        <li>Tork: 370 Nm</li>
+      </ul>
+
+      <h4>Yakıt ve Ekonomi</h4>
+      <ul>
+        <li>Yakıt Türü: Benzin</li>
+        <li>Şehir: 8L/100km, Otoban: 6L/100km</li>
+        <li>CO2 Emisyonu: 180 g/km</li>
+      </ul>
+
+      <h4>İç Mekan ve Konfor</h4>
+      <ul>
+        <li>Kapasite: 5 kişi</li>
+        <li>Bagaj Hacmi: 450 Litre</li>
+        <li>Koltuk Tipi: Deri, ısıtmalı</li>
+        <li>Klima: Çift bölgeli otomatik</li>
+      </ul>
+
+      <h4>Dış Tasarım</h4>
+      <ul>
+        <li>Renk Seçenekleri: Siyah, Beyaz, Mavi, Kırmızı</li>
+        <li>Jant: 18” Alüminyum</li>
+        <li>Farlar: LED adaptif</li>
+      </ul>
+
+      <h4>Güvenlik</h4>
+      <ul>
+        <li>Hava Yastıkları: 8 adet</li>
+        <li>ABS / ESP / Traction Control</li>
+        <li>Otomatik acil frenleme</li>
+        <li>Çarpışma testi: 5 yıldız</li>
+      </ul>
+
+      <h4>Sürüş ve Kullanım</h4>
+      <ul>
+        <li>Direksiyon: Hassas ve tepkili</li>
+        <li>Süspansiyon: Konfor + spor mod</li>
+        <li>Park: Sensör + kamera sistemi</li>
+      </ul>
+
+      <h4>Teknoloji ve Donanım</h4>
+      <ul>
+        <li>Multimedya: 12” dokunmatik ekran</li>
+        <li>Bluetooth, Wi-Fi, USB-C</li>
+        <li>Otonom sürüş destekleri: Şerit takip, adaptif cruise</li>
+      </ul>
+
+      <h4>Artılar ve Eksiler</h4>
+      <ul>
+        <li>Artılar: Konforlu, modern, yüksek güvenlik</li>
+        <

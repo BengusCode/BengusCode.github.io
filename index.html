@@ -5,64 +5,87 @@
   <title>BirBilen - Araç Rehberi</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      background: linear-gradient(to bottom, #e6f0ff, #cce0ff);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #001f3f;
       color: #003366;
     }
 
-    /* Başlık */
-    header {
+    /* Hero Section */
+    .hero {
+      position: relative;
+      background: url('https://cdn.pixabay.com/photo/2016/04/01/11/06/mustang-1305381_1280.jpg') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 100px 20px;
-      background: url('https://images.unsplash.com/photo-1615486331164-1c495e45f5b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTI0NzZ8MHwxfHNlYXJjaHwxfHxjYXIlMjBhcnR8ZW58MHx8fHwxNjk2OTcwMzU4&ixlib=rb-4.0.3&q=80&w=1400') center/cover no-repeat;
-      color: white;
-      text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
-      border-bottom: 5px solid #0066cc;
-      border-radius: 0 0 20px 20px;
+      color: #003366;
     }
 
-    header h1 {
+    .overlay {
+      position: absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background: rgba(0, 0, 50, 0.5);
+      z-index:1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index:2;
+      background: rgba(255,255,255,0.1);
+      padding: 40px 60px;
+      border-radius: 20px;
+      backdrop-filter: blur(5px);
+    }
+
+    .hero-content h1 {
       font-size: 70px;
-      color: #3399ff; /* Mavi renk */
+      color: #003366;
       margin: 0;
+      font-weight: bold;
     }
 
-    header p {
+    .hero-content p {
       font-size: 28px;
-      margin-top: 15px;
+      color: #003366;
+      margin-top: 10px;
       font-style: italic;
-      color: #e6f0ff;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+      font-weight: 600;
     }
 
-    /* Marka butonları */
+    /* Marka Butonları */
     .brand-buttons {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       padding: 50px 20px;
-      gap: 20px;
+      gap: 15px;
+      background: linear-gradient(to bottom, #cce0ff, #e6f0ff);
     }
 
     .brand-buttons a {
       display: block;
-      padding: 20px 30px;
+      padding: 15px 25px;
       background: #0044cc;
       color: white;
       text-decoration: none;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: bold;
       border-radius: 15px;
       box-shadow: 0 5px 20px rgba(0,0,0,0.3);
       transition: all 0.3s ease;
-      min-width: 140px;
+      min-width: 130px;
       text-align: center;
     }
 
     .brand-buttons a:hover {
       background: #0066ff;
-      transform: translateY(-6px) scale(1.05);
+      transform: translateY(-5px) scale(1.05);
       box-shadow: 0 10px 25px rgba(0,0,0,0.4);
     }
 
@@ -75,67 +98,69 @@
       margin-top: 30px;
     }
 
-    /* Responsive */
     @media(max-width: 700px){
-      header h1 { font-size: 50px; }
-      header p { font-size: 20px; }
-      .brand-buttons a { font-size: 16px; padding: 15px 20px; min-width: 120px; }
+      .hero-content h1 { font-size: 50px; }
+      .hero-content p { font-size: 20px; }
+      .brand-buttons a { font-size: 16px; padding: 12px 18px; min-width: 100px; }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>BirBilen</h1>
-    <p>Hayalindeki Aracı BirBilen’e Sor</p>
-  </header>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>BirBilen</h1>
+      <p>Hayalindeki Aracı BirBilen’e Sor</p>
+    </div>
+  </section>
 
+  <!-- Marka Butonları (Alfabetik) -->
   <div class="brand-buttons">
-    <!-- Avrupa Markaları -->
-    <a href="bmw-models.html">BMW</a>
+    <a href="acura-models.html">Acura</a>
+    <a href="alfa-romeo-models.html">Alfa Romeo</a>
+    <a href="aston-martin-models.html">Aston Martin</a>
     <a href="audi-models.html">Audi</a>
-    <a href="mercedes-models.html">Mercedes</a>
-    <a href="volkswagen-models.html">Volkswagen</a>
-    <a href="peugeot-models.html">Peugeot</a>
-    <a href="renault-models.html">Renault</a>
-    <a href="fiat-models.html">Fiat</a>
-    <a href="opel-models.html">Opel</a>
-    <a href="skoda-models.html">Škoda</a>
-    <a href="seat-models.html">SEAT</a>
-
-    <!-- Japon Markaları -->
-    <a href="toyota-models.html">Toyota</a>
-    <a href="honda-models.html">Honda</a>
-    <a href="nissan-models.html">Nissan</a>
-    <a href="mazda-models.html">Mazda</a>
-    <a href="subaru-models.html">Subaru</a>
-    <a href="mitsubishi-models.html">Mitsubishi</a>
-    <a href="lexus-models.html">Lexus</a>
-    <a href="infiniti-models.html">Infiniti</a>
-
-    <!-- Amerikan Markaları -->
-    <a href="ford-models.html">Ford</a>
-    <a href="chevrolet-models.html">Chevrolet</a>
-    <a href="tesla-models.html">Tesla</a>
-    <a href="dodge-models.html">Dodge</a>
-    <a href="jeep-models.html">Jeep</a>
-    <a href="cadillac-models.html">Cadillac</a>
-
-    <!-- Kore Markaları -->
-    <a href="kia-models.html">Kia</a>
-    <a href="hyundai-models.html">Hyundai</a>
-    <a href="genesis-models.html">Genesis</a>
-
-    <!-- Lüks ve diğer markalar -->
-    <a href="volvo-models.html">Volvo</a>
-    <a href="jaguar-models.html">Jaguar</a>
-    <a href="landrover-models.html">Land Rover</a>
-    <a href="porsche-models.html">Porsche</a>
-    <a href="ferrari-models.html">Ferrari</a>
-    <a href="lamborghini-models.html">Lamborghini</a>
+    <a href="bentley-models.html">Bentley</a>
+    <a href="bmw-models.html">BMW</a>
     <a href="bugatti-models.html">Bugatti</a>
+    <a href="cadillac-models.html">Cadillac</a>
+    <a href="chevrolet-models.html">Chevrolet</a>
+    <a href="chrysler-models.html">Chrysler</a>
+    <a href="dodge-models.html">Dodge</a>
+    <a href="ferrari-models.html">Ferrari</a>
+    <a href="fiat-models.html">Fiat</a>
+    <a href="ford-models.html">Ford</a>
+    <a href="genesis-models.html">Genesis</a>
+    <a href="gmc-models.html">GMC</a>
+    <a href="honda-models.html">Honda</a>
+    <a href="hyundai-models.html">Hyundai</a>
+    <a href="infiniti-models.html">Infiniti</a>
+    <a href="jaguar-models.html">Jaguar</a>
+    <a href="jeep-models.html">Jeep</a>
+    <a href="kia-models.html">Kia</a>
+    <a href="lamborghini-models.html">Lamborghini</a>
+    <a href="land-rover-models.html">Land Rover</a>
+    <a href="lexus-models.html">Lexus</a>
+    <a href="maserati-models.html">Maserati</a>
+    <a href="mazda-models.html">Mazda</a>
     <a href="mclaren-models.html">McLaren</a>
-    <a href="astonmartin-models.html">Aston Martin</a>
+    <a href="mercedes-models.html">Mercedes</a>
+    <a href="mini-models.html">Mini</a>
+    <a href="mitsubishi-models.html">Mitsubishi</a>
+    <a href="nissan-models.html">Nissan</a>
+    <a href="opel-models.html">Opel</a>
+    <a href="peugeot-models.html">Peugeot</a>
+    <a href="porsche-models.html">Porsche</a>
+    <a href="renault-models.html">Renault</a>
+    <a href="seat-models.html">SEAT</a>
+    <a href="skoda-models.html">Škoda</a>
+    <a href="subaru-models.html">Subaru</a>
+    <a href="tesla-models.html">Tesla</a>
+    <a href="toyota-models.html">Toyota</a>
+    <a href="volkswagen-models.html">Volkswagen</a>
+    <a href="volvo-models.html">Volvo</a>
   </div>
 
   <footer>

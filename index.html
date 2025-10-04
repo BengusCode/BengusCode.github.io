@@ -4,52 +4,36 @@
   <meta charset="UTF-8">
   <title>BirBilen - Araç Rehberi</title>
   <style>
-    body { font-family: Arial, sans-serif; background: #f0f6ff; margin:0; padding:0; color:#333; }
-    header { background: #003366; color:white; text-align:center; padding:20px; }
-    .container { max-width: 900px; margin: auto; padding: 20px; }
-    input[type="text"] { width: 100%; padding: 10px; font-size: 16px; border-radius:5px; border:1px solid #ccc; margin-bottom:20px; }
-    ul { list-style:none; padding:0; }
-    li { margin:10px 0; }
-    a { text-decoration:none; color:#0066cc; font-weight:bold; }
-    a:hover { text-decoration:underline; }
+    body { font-family: Arial, sans-serif; margin:0; background: #f0f6ff; }
+    header { text-align:center; padding:50px; background: url('https://www.carscoops.com/wp-content/uploads/2022/03/hero-car-image.jpg') center/cover no-repeat; color:white; }
+    header h1 { font-size:50px; text-shadow: 2px 2px 5px black; }
+    header p { font-size:20px; text-shadow: 1px 1px 3px black; }
+
+    .brand-buttons { display:flex; justify-content:center; flex-wrap:wrap; margin:30px 0; }
+    .brand-buttons a { 
+      margin:10px; padding:20px 30px; background:#003366; color:white; text-decoration:none; font-size:20px; border-radius:10px; transition:0.3s; 
+    }
+    .brand-buttons a:hover { background:#0066cc; }
+
+    footer { text-align:center; padding:20px; background:#003366; color:white; }
   </style>
 </head>
 <body>
   <header>
     <h1>BirBilen</h1>
-    <p>Araç dünyasında aradığın her şey</p>
+    <p>Araç dünyasında en doğru bilgiler</p>
   </header>
 
-  <div class="container">
-    <input type="text" id="searchBox" placeholder="Araç markası veya modelini yaz...">
-
-    <ul id="carList">
-      <li data-brand="BMW"><a href="bmw-3series.html">BMW 3 Serisi</a></li>
-      <li data-brand="BMW"><a href="bmw-5series.html">BMW 5 Serisi</a></li>
-      <li data-brand="Audi"><a href="audi-a6.html">Audi A6</a></li>
-      <li data-brand="Mercedes"><a href="mercedes-e200.html">Mercedes E200</a></li>
-      <li data-brand="Ford"><a href="ford-mustang.html">Ford Mustang</a></li>
-      <li data-brand="Peugeot"><a href="peugeot-508.html">Peugeot 508</a></li>
-    </ul>
+  <div class="brand-buttons">
+    <a href="bmw-models.html">BMW</a>
+    <a href="audi-models.html">Audi</a>
+    <a href="mercedes-models.html">Mercedes</a>
+    <a href="ford-models.html">Ford</a>
+    <a href="peugeot-models.html">Peugeot</a>
   </div>
 
-  <script>
-    const searchBox = document.getElementById('searchBox');
-    const carList = document.getElementById('carList');
-    const cars = carList.getElementsByTagName('li');
-
-    searchBox.addEventListener('keyup', function() {
-      const filter = searchBox.value.toUpperCase();
-      for(let i=0; i<cars.length; i++){
-        let brand = cars[i].getAttribute('data-brand').toUpperCase();
-        let text = cars[i].innerText.toUpperCase();
-        if(brand.includes(filter) || text.includes(filter)){
-          cars[i].style.display = "";
-        } else {
-          cars[i].style.display = "none";
-        }
-      }
-    });
-  </script>
+  <footer>
+    <p>© 2025 BirBilen - Tüm Hakları Saklıdır.</p>
+  </footer>
 </body>
 </html>

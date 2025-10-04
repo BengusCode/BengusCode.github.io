@@ -2,39 +2,43 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>BirBilen - Araç Tanıtımları</title>
+  <title>BMW Modelleri - BirBilen</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f0f6ff; color: #333; }
-    header { text-align: center; padding: 30px; background: #003366; color: white; }
-    section { max-width: 900px; margin: auto; padding: 20px; }
-    h2 { color: #003366; }
-    ul { list-style-type: none; padding: 0; }
-    li { margin: 10px 0; }
-    a { text-decoration: none; color: #0066cc; font-weight: bold; }
-    a:hover { text-decoration: underline; }
-    footer { text-align: center; padding: 20px; background: #003366; color: white; margin-top: 30px; }
+    body { font-family: Arial, sans-serif; margin:0; background:#f5f9ff; color:#333; }
+    header { text-align:center; padding:30px; background:#003366; color:white; }
+    header h1 { margin:0; }
+    .models { display:flex; flex-wrap:wrap; justify-content:center; margin:30px; }
+    .model-card { background:white; margin:15px; padding:15px; width:200px; text-align:center; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1); transition:0.3s; }
+    .model-card:hover { transform: scale(1.05); }
+    .model-card img { max-width:100%; border-radius:10px; }
+    .model-card a { text-decoration:none; color:#003366; font-weight:bold; display:block; margin-top:10px; }
+    .back { text-align:center; margin:20px; }
   </style>
 </head>
 <body>
   <header>
-    <h1>BirBilen</h1>
-    <p>Araç dünyasında en doğru bilgiler</p>
+    <h1>BMW Modelleri</h1>
+    <p>İstediğiniz BMW modelini seçin</p>
   </header>
 
-  <section id="bmw">
-    <h2>BMW Modelleri</h2>
-    <ul>
-      <li><a href="bmw-3series.html">BMW 3 Serisi</a></li>
-      <li><a href="bmw-5series.html">BMW 5 Serisi</a></li>
-      <li><a href="bmw-7series.html">BMW 7 Serisi</a></li>
-      <li><a href="bmw-x5.html">BMW X5</a></li>
-      <li><a href="bmw-m3.html">BMW M3</a></li>
-      <li><a href="bmw-i4.html">BMW i4 (Elektrikli)</a></li>
-    </ul>
-  </section>
+  <div class="models">
+    <div class="model-card">
+      <img src="https://www.bmw.com.tr/content/dam/bmw/common/all-models/3-series/sedan/2022/highlights/bmw-3-series-sedan-m-automobiles-modelfinder.png" alt="BMW 3 Serisi">
+      <a href="bmw-3series.html">BMW 3 Serisi</a>
+    </div>
+    <div class="model-card">
+      <img src="https://www.bmw.com.tr/content/dam/bmw/common/all-models/5-series/sedan/2022/highlights/bmw-5-series-sedan-m-automobiles-modelfinder.png" alt="BMW 5 Serisi">
+      <a href="bmw-5series.html">BMW 5 Serisi</a>
+    </div>
+    <div class="model-card">
+      <img src="https://www.bmw.com.tr/content/dam/bmw/common/all-models/x5/suv/2022/highlights/bmw-x5-suv-m-automobiles-modelfinder.png" alt="BMW X5">
+      <a href="bmw-x5.html">BMW X5</a>
+    </div>
+    <!-- İleride diğer BMW modelleri eklenebilir -->
+  </div>
 
-  <footer>
-    <p>© 2025 BirBilen - Tüm Hakları Saklıdır.</p>
-  </footer>
+  <div class="back">
+    <a href="index.html">← Ana Sayfaya Dön</a>
+  </div>
 </body>
 </html>

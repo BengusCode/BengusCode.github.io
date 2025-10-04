@@ -4,36 +4,141 @@
   <meta charset="UTF-8">
   <title>BirBilen - Araç Rehberi</title>
   <style>
-    body { font-family: Arial, sans-serif; margin:0; background: #f0f6ff; }
-    header { text-align:center; padding:50px; background: url('https://www.carscoops.com/wp-content/uploads/2022/03/hero-car-image.jpg') center/cover no-repeat; color:white; }
-    header h1 { font-size:50px; text-shadow: 2px 2px 5px black; }
-    header p { font-size:20px; text-shadow: 1px 1px 3px black; }
-
-    .brand-buttons { display:flex; justify-content:center; flex-wrap:wrap; margin:30px 0; }
-    .brand-buttons a { 
-      margin:10px; padding:20px 30px; background:#003366; color:white; text-decoration:none; font-size:20px; border-radius:10px; transition:0.3s; 
+    /* Genel stil */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: linear-gradient(to bottom, #cce0ff, #e6f0ff);
+      color: #003366;
     }
-    .brand-buttons a:hover { background:#0066cc; }
 
-    footer { text-align:center; padding:20px; background:#003366; color:white; }
+    /* Başlık kısmı */
+    header {
+      text-align: center;
+      padding: 80px 20px;
+      background: url('https://images.unsplash.com/photo-1615486331164-1c495e45f5b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTI0NzZ8MHwxfHNlYXJjaHwxfHxjYXIlMjBhcnR8ZW58MHx8fHwxNjk2OTcwMzU4&ixlib=rb-4.0.3&q=80&w=1400') center/cover no-repeat;
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      border-bottom: 5px solid #0066cc;
+    }
+
+    header h1 {
+      font-size: 60px;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 24px;
+      margin-top: 15px;
+      font-style: italic;
+    }
+
+    /* Marka butonları */
+    .brand-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 20px;
+    }
+
+    .brand-buttons a {
+      display: block;
+      padding: 20px 30px;
+      background: #0044cc;
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: 0.3s;
+      text-align: center;
+      min-width: 130px;
+    }
+
+    .brand-buttons a:hover {
+      background: #0066ff;
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #003366;
+      color: white;
+      margin-top: 30px;
+      border-top: 5px solid #0066cc;
+    }
+
+    /* Responsive */
+    @media(max-width: 600px){
+      header h1 { font-size: 40px; }
+      header p { font-size: 18px; }
+      .brand-buttons a { font-size: 16px; padding: 15px 20px; }
+    }
   </style>
 </head>
 <body>
+
   <header>
     <h1>BirBilen</h1>
-    <p>Araç dünyasında en doğru bilgiler</p>
+    <p>"Hayalindeki Aracı Keşfet, Doğru Seçimi Yap!"</p>
   </header>
 
   <div class="brand-buttons">
+    <!-- Avrupa Markaları -->
     <a href="bmw-models.html">BMW</a>
     <a href="audi-models.html">Audi</a>
     <a href="mercedes-models.html">Mercedes</a>
-    <a href="ford-models.html">Ford</a>
+    <a href="volkswagen-models.html">Volkswagen</a>
     <a href="peugeot-models.html">Peugeot</a>
+    <a href="renault-models.html">Renault</a>
+    <a href="fiat-models.html">Fiat</a>
+    <a href="opel-models.html">Opel</a>
+    <a href="skoda-models.html">Škoda</a>
+    <a href="seat-models.html">SEAT</a>
+
+    <!-- Japon Markaları -->
+    <a href="toyota-models.html">Toyota</a>
+    <a href="honda-models.html">Honda</a>
+    <a href="nissan-models.html">Nissan</a>
+    <a href="mazda-models.html">Mazda</a>
+    <a href="subaru-models.html">Subaru</a>
+    <a href="mitsubishi-models.html">Mitsubishi</a>
+    <a href="lexus-models.html">Lexus</a>
+    <a href="infiniti-models.html">Infiniti</a>
+
+    <!-- Amerikan Markaları -->
+    <a href="ford-models.html">Ford</a>
+    <a href="chevrolet-models.html">Chevrolet</a>
+    <a href="tesla-models.html">Tesla</a>
+    <a href="dodge-models.html">Dodge</a>
+    <a href="jeep-models.html">Jeep</a>
+    <a href="cadillac-models.html">Cadillac</a>
+
+    <!-- Kore Markaları -->
+    <a href="kia-models.html">Kia</a>
+    <a href="hyundai-models.html">Hyundai</a>
+    <a href="genesis-models.html">Genesis</a>
+
+    <!-- Diğer Bilinen Markalar -->
+    <a href="volvo-models.html">Volvo</a>
+    <a href="jaguar-models.html">Jaguar</a>
+    <a href="landrover-models.html">Land Rover</a>
+    <a href="porsche-models.html">Porsche</a>
+    <a href="ferrari-models.html">Ferrari</a>
+    <a href="lamborghini-models.html">Lamborghini</a>
+    <a href="bugatti-models.html">Bugatti</a>
+    <a href="mclaren-models.html">McLaren</a>
+    <a href="astonmartin-models.html">Aston Martin</a>
   </div>
 
   <footer>
     <p>© 2025 BirBilen - Tüm Hakları Saklıdır.</p>
   </footer>
+
 </body>
 </html>
